@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import ExpenseChart from "../components/Chart";
+
 
 function Tracker() {
     const [userData, setUserData] = useState({
@@ -129,6 +131,7 @@ function Tracker() {
             <h1>{userData?.username}</h1>
             <h2>Balance: {balance} $</h2>
             <button onClick={handleLogout}>Logout</button>
+            <ExpenseChart transactions={transactions} />
 
             <form className="form-container">
                 <select
