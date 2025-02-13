@@ -38,7 +38,7 @@ const ExpenseChart = ({ transactions }) => {
     }, [transactions]);
 
     return (
-        <div style={{ height: '400px', width: '100%' }}>
+        <div style={{ height: '400px', width: '88%' }}>
             <h3>Income & Expense by Category</h3>
             <Bar data={chartData} options={{ responsive: true, maintainAspectRatio: false }} />
         </div>
